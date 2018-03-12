@@ -1,0 +1,109 @@
+/*
+ * author: Manuel Schneider <https://github.com/ManuelSchneid3r>
+ *
+ * Check http://doc.qt.io/qt-5/stylesheet-syntax.html especially the subtopics:
+ * The Style Sheet Syntax (http://doc.qt.io/qt-5/stylesheet-syntax.html)
+ * Qt Style Sheets Reference (http://doc.qt.io/qt-5/stylesheet-reference.html)
+ */
+
+* {
+  border: none;
+  font-family:"Ubunto Mono Regular";
+  font-weight: 400;
+	color: #f9f9f9;
+	background-color: transparent;
+}
+
+#frame {
+	padding: 14px;
+	border: 1px solid #20808080;
+  background-color: rgba(33, 37, 43, 0.9);
+  border-radius: 7px;
+  color: #f9f9f9;
+  /* background-image: url(/home/jjgaardbo/Pictures/matrix.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+
+  /* Workaround for Qt to get fixed size button*/
+	min-width:640px;
+	max-width:640px;
+}
+
+#inputLine {
+	font-size: 32px;
+	selection-color: #f9f9f900;
+	selection-background-color: #ffffff;
+	background-color: transparent;
+  color: #f9f9f9;
+}
+
+#settingsButton {
+	color: #484848;
+	background-color: transparent;
+  padding: 8px;
+
+  /* Workaround for Qt to get fixed size button*/
+	min-width:14px;
+	min-height:14px;
+	max-width:14px;
+	max-height:14px;
+}
+
+/********** ListViews ************/
+
+QListView {
+	selection-color: #f9f9f9;
+}
+
+QListView::item {
+	color: #f9f9f9;
+}
+
+QListView::item:selected {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+	background: rgba(255,255,255,0.1);
+  border-right: 6px solid rgba(249,249,249, 1);
+}
+
+QListView QScrollBar:vertical  {
+	width: 2px;
+	background: transparent;
+}
+
+QListView QScrollBar::handle:vertical  {
+	background: #484848;
+	min-height: 24px;
+}
+
+QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QListView QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
+QListView QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	border: 0px;
+	width: 0px;
+	height: 0px;
+	background: transparent;
+}
+
+/********** actionList **********/
+
+QListView#actionList {
+	font-size: 20px;
+}
+
+QListView#actionList::item{
+	height:28px;
+}
+
+/********** resultsList **********/
+
+QListView#resultsList {
+	icon-size: 40px;
+	font-size: 22px;
+}
+
+QListView#resultsList::item{
+	height:56px;
+}
